@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h2 class="current-location" id="current-location"></h2>
+        <div class="first-button">
+          <div class="row">
+            <div class="col">
+              <button class="btn-primary" id="btn-current-location">
+                Current
+              </button>
+            </div>
+            <div class="col">
+              <button class="btn-primary" id="five-days">5 days</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="main">
+          <form id="form">
+            <div class="row">
+              <div class="col-8">
+                <input
+                  type="text"
+                  class="input-text"
+                  autocomplete="off"
+                  id="cityInput"
+                  placeholder="Search weather "
+                />
+              </div>
+              <div class="col-4">
+                <button type="button" id="btn-search" class="btn btn-primary">
+                  Primary
+                </button>
+              </div>
+            </div>
+          </form>
+          <div class="mid">
+            <div class="row">
+              <div class="col">
+                <ul>
+                  <li class="curently" id="city">Nigeria</li>
+                  <li class="date" id="date">Friday 15 : 45</li>
+                  <li class="description" id="description">Partly Cloudy</li>
+                </ul>
+              </div>
+              <div class="col">
+                <div></div>
+              </div>
+            </div>
+          </div>
+          <div class="row temp-main">
+            <div class="col-3">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="weather-img"
+                id="icon"
+                class="icon"
+              />
+            </div>
+            <div class="col-4">
+              <div class="temp">
+                <span class="temperature" id="temperature">71</span>
+                <span class="units">°C / °F</span>
+              </div>
+            </div>
+            <div class="col-5">
+              <li class="humidity">Humidity: <span id="humidity"></span> %</li>
+              <li class="wind">Wind : <span id="wind"> </span> km/h</li>
+            </div>
+          </div>
+        </div>
+        <div class="forecast" id="forecast"></div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
